@@ -3,88 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <title>AIボットポータル</title>
+  <!-- Dify の Web Widget スクリプトを読み込む -->
+  <script src="https://cdn.dify.ai/widget.js"></script>
+  <!-- Tailwind（お好みで） -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- ヘッダー -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-4">
-      <h1 class="text-2xl font-bold">AIボットポータル</h1>
-    </div>
+  <header class="bg-white shadow p-4">
+    <h1 class="text-2xl font-bold">AIボットポータル</h1>
   </header>
 
-  <!-- ボットタイル -->
-  <main class="container mx-auto px-6 py-12">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- タイル１：コンセプトメイキング -->
-      <button
-        class="block bg-red-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('https://udify.app/chatbot/NuXIbgeJE8039PSA')"
-      >
-        <div class="text-3xl mb-2">📢</div>
-        <h2 class="font-semibold text-lg">コンセプトメイキング</h2>
-        <p class="text-sm mt-1">アイデアを形にします。</p>
-      </button>
+  <main class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- コンセプトメイキングBot -->
+    <div class="bg-red-500 text-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold mb-2">📢 コンセプトメイキング</h2>
+      <p class="text-sm mb-4">アイデアを形にします。</p>
+      <!-- ここに埋め込みウィジェット用の div を置くだけ -->
+      <div
+        data-dify-bot="NuXIbgeJE8039PSA"
+        style="width:100%;height:400px;background:#fff;border-radius:8px;overflow:hidden;"
+      ></div>
+    </div>
 
-      <!-- タイル２：講座内容作成 -->
-      <button
-        class="block bg-green-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('https://udify.app/chatbot/VdFWDBooqwAz8oIf')"
-      >
-        <div class="text-3xl mb-2">🎓</div>
-        <h2 class="font-semibold text-lg">講座内容作成</h2>
-        <p class="text-sm mt-1">講座構成を提案。</p>
-      </button>
+    <!-- 講座内容作成Bot -->
+    <div class="bg-green-500 text-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold mb-2">🎓 講座内容作成</h2>
+      <p class="text-sm mb-4">講座構成を提案。</p>
+      <div
+        data-dify-bot="VdFWDBooqwAz8oIf"
+        style="width:100%;height:400px;background:#fff;border-radius:8px;overflow:hidden;"
+      ></div>
+    </div>
 
-      <!-- タイル３：LP作成 -->
-      <button
-        class="block bg-blue-600 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('https://udify.app/chatbot/gx7OZ8wPclMwtrMJ')"
-      >
-        <div class="text-3xl mb-2">📝</div>
-        <h2 class="font-semibold text-lg">LP作成</h2>
-        <p class="text-sm mt-1">魅力的なLPを生成。</p>
-      </button>
-
+    <!-- LP作成Bot -->
+    <div class="bg-blue-600 text-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold mb-2">📝 LP作成</h2>
+      <p class="text-sm mb-4">魅力的なLPを生成。</p>
+      <div
+        data-dify-bot="gx7OZ8wPclMwtrMJ"
+        style="width:100%;height:400px;background:#fff;border-radius:8px;overflow:hidden;"
+      ></div>
     </div>
   </main>
 
-  <!-- オーバーレイ＆iframe -->
-  <div
-    id="botOverlay"
-    class="hidden fixed inset-0 bg-white z-50 flex flex-col"
-  >
-    <div class="flex justify-end p-4">
-      <button onclick="closeBot()" class="text-gray-600 hover:text-black">
-        閉じる ✕
-      </button>
-    </div>
-    <iframe
-      id="botIframe"
-      src=""
-      frameborder="0"
-      allow="microphone"
-      class="flex-1 w-full"
-    ></iframe>
-  </div>
-
-  <!-- スクリプト -->
-  <script>
-    function openBot(url) {
-      const overlay = document.getElementById('botOverlay');
-      const iframe  = document.getElementById('botIframe');
-      iframe.src = url;
-      overlay.classList.remove('hidden');
-    }
-    function closeBot() {
-      document.getElementById('botOverlay').classList.add('hidden');
-      document.getElementById('botIframe').src = '';
-    }
-  </script>
+  <footer class="text-center text-gray-600 py-4">
+    &copy; 2025 Your Company
+  </footer>
 
 </body>
 </html>

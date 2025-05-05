@@ -4,54 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>AIボットポータル</title>
-  <!-- Dify の Web Widget スクリプトを読み込む -->
-  <script src="https://cdn.dify.ai/widget.js"></script>
-  <!-- Tailwind（お好みで） -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 先ほど作成した CSS を読み込む -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-  <header class="bg-white shadow p-4">
-    <h1 class="text-2xl font-bold">AIボットポータル</h1>
+  <!-- ヘッダー -->
+  <header>
+    <h1>AIボットポータル</h1>
   </header>
 
-  <main class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- コンセプトメイキングBot -->
-    <div class="bg-red-500 text-white p-4 rounded-lg shadow">
-      <h2 class="text-lg font-semibold mb-2">📢 コンセプトメイキング</h2>
-      <p class="text-sm mb-4">アイデアを形にします。</p>
-      <!-- ここに埋め込みウィジェット用の div を置くだけ -->
-      <div
-        data-dify-bot="NuXIbgeJE8039PSA"
-        style="width:100%;height:400px;background:#fff;border-radius:8px;overflow:hidden;"
-      ></div>
-    </div>
+  <!-- ボタン群を中央に寄せ -->
+  <main>
+    <div class="grid">
+      <!-- コンセプトメイキングBot -->
+      <a
+        href="https://udify.app/chatbot/NuXIbgeJE8039PSA"
+        target="_blank" rel="noopener"
+        class="bot-card red"
+      >
+        <div class="icon">📢</div>
+        <div class="title">コンセプトメイキング</div>
+      </a>
 
-    <!-- 講座内容作成Bot -->
-    <div class="bg-green-500 text-white p-4 rounded-lg shadow">
-      <h2 class="text-lg font-semibold mb-2">🎓 講座内容作成</h2>
-      <p class="text-sm mb-4">講座構成を提案。</p>
-      <div
-        data-dify-bot="VdFWDBooqwAz8oIf"
-        style="width:100%;height:400px;background:#fff;border-radius:8px;overflow:hidden;"
-      ></div>
-    </div>
+      <!-- 講座内容作成Bot -->
+      <a
+        href="https://udify.app/chatbot/VdFWDBooqwAz8oIf"
+        target="_blank" rel="noopener"
+        class="bot-card green"
+      >
+        <div class="icon">🎓</div>
+        <div class="title">講座内容作成</div>
+      </a>
 
-    <!-- LP作成Bot -->
-    <div class="bg-blue-600 text-white p-4 rounded-lg shadow">
-      <h2 class="text-lg font-semibold mb-2">📝 LP作成</h2>
-      <p class="text-sm mb-4">魅力的なLPを生成。</p>
-      <div
-        data-dify-bot="gx7OZ8wPclMwtrMJ"
-        style="width:100%;height:400px;background:#fff;border-radius:8px;overflow:hidden;"
-      ></div>
+      <!-- LP作成Bot -->
+      <a
+        href="https://udify.app/chatbot/gx7OZ8wPclMwtrMJ"
+        target="_blank" rel="noopener"
+        class="bot-card blue"
+      >
+        <div class="icon">📝</div>
+        <div class="title">LP作成</div>
+      </a>
     </div>
   </main>
 
-  <footer class="text-center text-gray-600 py-4">
-    &copy; 2025 Your Company
-  </footer>
-
 </body>
 </html>
+
 

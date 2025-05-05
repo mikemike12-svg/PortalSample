@@ -19,35 +19,37 @@
   <!-- ボットタイル -->
   <main class="container mx-auto px-6 py-12">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
       <!-- タイル１：コンセプトメイキング -->
       <button
         class="block bg-red-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('NuXIbgeJE8039PSA')"
+        onclick="openBot('https://udify.app/chatbot/NuXIbgeJE8039PSA')"
       >
         <div class="text-3xl mb-2">📢</div>
         <h2 class="font-semibold text-lg">コンセプトメイキング</h2>
         <p class="text-sm mt-1">アイデアを形にします。</p>
       </button>
 
-      <!-- タイル２：LP作成 -->
+      <!-- タイル２：講座内容作成 -->
+      <button
+        class="block bg-green-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
+        onclick="openBot('https://udify.app/chatbot/VdFWDBooqwAz8oIf')"
+      >
+        <div class="text-3xl mb-2">🎓</div>
+        <h2 class="font-semibold text-lg">講座内容作成</h2>
+        <p class="text-sm mt-1">講座構成を提案。</p>
+      </button>
+
+      <!-- タイル３：LP作成 -->
       <button
         class="block bg-blue-600 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('gx7OZ8wPclMwtrMJ')"
+        onclick="openBot('https://udify.app/chatbot/gx7OZ8wPclMwtrMJ')"
       >
         <div class="text-3xl mb-2">📝</div>
         <h2 class="font-semibold text-lg">LP作成</h2>
         <p class="text-sm mt-1">魅力的なLPを生成。</p>
       </button>
 
-      <!-- タイル３：講座内容作成 -->
-      <button
-        class="block bg-green-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('VdFWDBooqwAz8oIf')"
-      >
-        <div class="text-3xl mb-2">🎓</div>
-        <h2 class="font-semibold text-lg">講座内容作成</h2>
-        <p class="text-sm mt-1">講座構成を提案。</p>
-      </button>
     </div>
   </main>
 
@@ -57,10 +59,7 @@
     class="hidden fixed inset-0 bg-white z-50 flex flex-col"
   >
     <div class="flex justify-end p-4">
-      <button
-        onclick="closeBot()"
-        class="text-gray-600 hover:text-black"
-      >
+      <button onclick="closeBot()" class="text-gray-600 hover:text-black">
         閉じる ✕
       </button>
     </div>
@@ -68,16 +67,17 @@
       id="botIframe"
       src=""
       frameborder="0"
+      allow="microphone"
       class="flex-1 w-full"
     ></iframe>
   </div>
 
   <!-- スクリプト -->
   <script>
-    function openBot(botId) {
+    function openBot(url) {
       const overlay = document.getElementById('botOverlay');
       const iframe  = document.getElementById('botIframe');
-      iframe.src = `https://app.dify.ai/bot/${botId}/embed`;
+      iframe.src = url;
       overlay.classList.remove('hidden');
     }
     function closeBot() {
@@ -89,5 +89,3 @@
 </body>
 </html>
 
-</body>
-</html>

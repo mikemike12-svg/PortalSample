@@ -19,37 +19,35 @@
   <!-- ボットタイル -->
   <main class="container mx-auto px-6 py-12">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- タイル１ -->
+      <!-- タイル１：コンセプトメイキング -->
       <button
         class="block bg-red-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('BOT_ID_1')"
+        onclick="openBot('NuXIbgeJE8039PSA')"
       >
         <div class="text-3xl mb-2">📢</div>
         <h2 class="font-semibold text-lg">コンセプトメイキング</h2>
         <p class="text-sm mt-1">アイデアを形にします。</p>
       </button>
 
-      <!-- タイル２ -->
+      <!-- タイル２：LP作成 -->
       <button
         class="block bg-blue-600 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('BOT_ID_2')"
+        onclick="openBot('gx7OZ8wPclMwtrMJ')"
       >
         <div class="text-3xl mb-2">📝</div>
         <h2 class="font-semibold text-lg">LP作成</h2>
         <p class="text-sm mt-1">魅力的なLPを生成。</p>
       </button>
 
-      <!-- タイル３ -->
+      <!-- タイル３：講座内容作成 -->
       <button
         class="block bg-green-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-left"
-        onclick="openBot('BOT_ID_3')"
+        onclick="openBot('VdFWDBooqwAz8oIf')"
       >
         <div class="text-3xl mb-2">🎓</div>
         <h2 class="font-semibold text-lg">講座内容作成</h2>
         <p class="text-sm mt-1">講座構成を提案。</p>
       </button>
-
-      <!-- 追加のタイルは同様にコピーしてBOT_IDを変えるだけ -->
     </div>
   </main>
 
@@ -79,7 +77,6 @@
     function openBot(botId) {
       const overlay = document.getElementById('botOverlay');
       const iframe  = document.getElementById('botIframe');
-      // Difyの埋め込みURL
       iframe.src = `https://app.dify.ai/bot/${botId}/embed`;
       overlay.classList.remove('hidden');
     }
@@ -88,6 +85,9 @@
       document.getElementById('botIframe').src = '';
     }
   </script>
+
+</body>
+</html>
 
 </body>
 </html>

@@ -3,53 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>AIボットポータル</title>
-  <style>
-    /* 画面全体を使って中央寄せ */
-    body, html { margin:0; height:100%; }
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      gap: 20px;
-    }
-    .bot-link {
-      display: block;
-      width: 200px;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .bot1 { background: #E53E3E; }   /* 赤 */
-    .bot2 { background: #38A169; }   /* 緑 */
-    .bot3 { background: #3182CE; }   /* 青 */
-  </style>
 </head>
-<body>
-  <div class="container">
-    <!-- 新しいタブで開く -->
-    <a class="bot-link bot1"
-       href="https://udify.app/chatbot/NuXIbgeJE8039PSA"
-       target="_blank" rel="noopener">
-      📢 コンセプトメイキング
-    </a>
+<body class="bg-gray-50 text-gray-800">
 
-    <a class="bot-link bot2"
-       href="https://udify.app/chatbot/VdFWDBooqwAz8oIf"
-       target="_blank" rel="noopener">
-      🎓 講座内容作成
-    </a>
+  <header class="bg-white shadow py-4">
+    <h1 class="text-2xl font-bold text-center">AIボットポータル</h1>
+  </header>
 
-    <a class="bot-link bot3"
-       href="https://udify.app/chatbot/gx7OZ8wPclMwtrMJ"
-       target="_blank" rel="noopener">
-      📝 LP作成
-    </a>
-  </div>
+  <main class="flex items-center justify-center min-h-screen">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+
+      <!-- 各ページへ内部リンク -->
+      <a
+        href="concept.html"
+        class="w-64 bg-red-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-center"
+      >
+        <div class="text-4xl mb-2">📢</div>
+        <h2 class="font-semibold text-lg">コンセプトメイキング</h2>
+      </a>
+
+      <a
+        href="course.html"
+        class="w-64 bg-green-500 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-center"
+      >
+        <div class="text-4xl mb-2">🎓</div>
+        <h2 class="font-semibold text-lg">講座内容作成</h2>
+      </a>
+
+      <a
+        href="lp.html"
+        class="w-64 bg-blue-600 text-white p-6 rounded-lg shadow hover:shadow-lg transition text-center"
+      >
+        <div class="text-4xl mb-2">📝</div>
+        <h2 class="font-semibold text-lg">LP作成</h2>
+      </a>
+
+    </div>
+  </main>
+
 </body>
 </html>
